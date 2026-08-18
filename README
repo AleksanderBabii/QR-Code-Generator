@@ -1,0 +1,241 @@
+# QR & Barcode Generator
+
+A simple, responsive web application for generating **QR codes and barcodes** directly in the browser.
+
+Users can enter URLs, text, numbers, or alphanumeric values and instantly generate a downloadable QR code or barcode.
+
+## Features
+
+* Generate QR codes from:
+
+  * URLs
+  * Text
+  * Numbers
+  * Alphanumeric values
+* Generate CODE128 barcodes
+* Live preview while typing
+* Download generated QR codes as PNG
+* Download generated barcodes as SVG
+* Responsive design for desktop, tablet, and mobile devices
+* Separate pages for QR code and barcode generation
+* Client-side generation — no backend required
+* Smooth UI animations with Framer Motion
+* Reusable Navbar and Footer components
+
+## Technologies
+
+### Frontend
+
+* React
+* JavaScript (ES6+)
+* SCSS
+* React Router
+* Framer Motion
+
+### Libraries
+
+* [QRCode](https://www.npmjs.com/package/qrcode) — QR code generation
+* [JsBarcode](https://www.npmjs.com/package/jsbarcode) — barcode generation
+* [React Router](https://reactrouter.com/) — client-side routing
+* [Framer Motion](https://www.framer.com/motion/) — UI animations
+
+### Development & Deployment
+
+* Vite
+* npm
+* Git & GitHub
+* Vercel
+
+## How It Works
+
+The application provides two generators:
+
+### QR Code Generator
+
+Enter any text, number, URL, or other supported string.
+
+Examples:
+
+```text
+https://example.com
+```
+
+```text
+Hello World
+```
+
+```text
+123456789
+```
+
+```text
+PRODUCT-2026-001
+```
+
+The application generates the QR code directly in the browser using the `qrcode` library.
+
+### Barcode Generator
+
+The barcode generator uses the **CODE128** format, which supports both numbers and letters.
+
+Examples:
+
+```text
+123456789
+```
+
+```text
+ABC123
+```
+
+```text
+PRODUCT-001
+```
+
+```text
+INV-2026-08
+```
+
+The generated barcode can then be downloaded as an SVG file.
+
+## Project Structure
+
+```text
+QR-Code-Generator/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── GeneratedCard/
+│   │   │   └── GeneratedCard.jsx
+│   │   │
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Navbar.module.scss
+│   │   │
+│   │   └── Footer/
+│   │       ├── Footer.jsx
+│   │       └── Footer.module.scss
+│   │
+│   ├── pages/
+│   │   ├── BarcodeGenerator/
+│   │   │   ├── BarcodeGenerator.jsx
+│   │   │   └── BarcodeGenerator.module.scss
+│   │   │
+│   │   └── QrCodeGenerator/
+│   │       ├── QrCodeGenerator.jsx
+│   │       └── QrCodeGenerator.module.scss
+│   │
+│   ├── styles/
+│   │   └── styles.scss
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+* Node.js
+* npm
+* Git
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+Navigate into the project:
+
+```bash
+cd QR-Code-Generator
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at the local Vite development URL, usually:
+
+```text
+http://localhost:5173
+```
+
+## Build for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+The application can be deployed as a static React application.
+
+This project is configured for deployment with **Vercel**.
+
+A production deployment can be created by connecting the GitHub repository to Vercel. New commits pushed to the main branch can then trigger automatic deployments.
+
+## Responsive Design
+
+The application is designed to work across different screen sizes, including:
+
+* Mobile phones
+* Tablets
+* Laptops
+* Desktop computers
+
+The generated QR codes and barcodes scale within their containers to prevent horizontal overflow on smaller screens.
+
+## Future Improvements
+
+Possible improvements for future versions include:
+
+* [ ] QR code customization
+* [ ] QR code color customization
+* [ ] QR code size controls
+* [ ] QR error correction options
+* [ ] Barcode format selection
+* [ ] Download barcode as PNG
+* [ ] Download QR code as SVG
+* [ ] Copy generated content
+* [ ] Generation history
+* [ ] Dark mode
+* [ ] Improved accessibility
+* [ ] PWA support
+
+## License
+
+This project is open source and available under the MIT License.
+
+---
+
+Built with React, JavaScript and SCSS.

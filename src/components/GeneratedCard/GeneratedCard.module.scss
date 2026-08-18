@@ -1,0 +1,50 @@
+.generated-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.generated-card {
+    width: min(100%, 400px);
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.generated-card__preview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.generated-card__preview canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.generated-card__preview svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.generated-card__download {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .generated-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .generated-card__download {
+        width: 100%;
+    }
+}

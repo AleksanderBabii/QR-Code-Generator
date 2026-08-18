@@ -1,0 +1,112 @@
+@use "../../styles/variables/variables" as *;
+
+.page {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-large;
+
+    
+    color: $text-color;
+}
+
+.generator {
+    display: flex;
+    width: min(100%, 600px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: $padding-medium;
+
+    background-color: $card-background-color;
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow;
+}
+
+.header {
+    margin-bottom: $padding-medium;
+    text-align: center;
+    font-size: $font-size-large;
+}
+
+.form {
+    display: flex;
+    width: min(100%, 450px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: $padding-small;
+    margin-bottom: $padding-medium;
+
+    .input {
+        width: 100%;
+        padding: $padding-small;
+
+        font-size: $font-size-medium;
+
+        border: $border-color;
+        border-radius: $border-radius-small;
+        outline: none;
+
+        &:focus {
+            border-color: $background-color-darker;
+        }
+    }
+
+    .button {
+        padding: $padding-small $padding-medium;
+
+        font-size: $font-size-medium;
+
+        border: none;
+        border-radius: $border-radius-small;
+
+        background-color: $background-color;
+        color: $text-color;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $background-color-darker;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .page {
+        padding: $padding-medium;
+    }
+
+    .generator {
+        width: 100%;
+        padding: $padding-small;
+    }
+
+    .header {
+        font-size: $font-size-medium;
+    }
+
+    .form {
+        width: 100%;
+        gap: $padding-small;
+
+        .input {
+            font-size: $font-size-small;
+        }
+
+        .button {
+            padding: $padding-small;
+            font-size: $font-size-small;
+        }
+    }
+}
